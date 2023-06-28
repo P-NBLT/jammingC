@@ -1,0 +1,9 @@
+.results-list {
+    width: 25%;
+    background-color: white;
+    box-shadow: 0rem 0rem 0.5rem #ddd;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+    max-height: 18rem;
+    overflow-y: scroll;
+}

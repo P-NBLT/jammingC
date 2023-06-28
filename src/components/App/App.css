@@ -1,0 +1,32 @@
+.searchPlaylist {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+
+.search {
+  background-color: #eee;
+  height: 50vh;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.input {
+  padding-top: 5rem;
+  width: 40%;
+  align-items: center;
+  min-width: 200px;
+}
+
+.playlist {
+  background-color: #eee;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+

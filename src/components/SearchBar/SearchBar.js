@@ -1,37 +1,17 @@
-import './SearchBar.css';
-import { useState } from 'react';
+import React, { useState, useCallback } from "react";
 
-function SearchBar({setResults}) {
-    const [input, setInput] = useState("");
+import "./SearchBar.css";
 
-    const fetchData = (value) => {
-            fetch("https://jsonplaceholder.typicode.com/users")
-            .then((response) => response.json())
-            .then(json => {
-              const results = json.filter((user) => {
-                return (
-                    value &&
-                    user && 
-                    user.name && 
-                    user.name.toLowerCase().includes(value)
-                );                
-              });
-              console.log(results);
-              setResults(results);
-            });
-    }
+const SearchBar = () => {
 
-    const handleChange = (value) => {
-        setInput (value)
-        fetchData(value)
-    }
-
-    return (
-        <div className="input">
-            <input placeholder='Type to search...' 
-            value={input}
-            onChange={(e) => handleChange(e.target.value)} />
-        </div>
-    );
+  return (
+    <div className="SearchBar">
+      <input placeholder="Enter A Song Title" />
+      <button>
+        SEARCH
+      </button>
+    </div>
+  );
 };
+
 export default SearchBar;

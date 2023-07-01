@@ -1,26 +1,56 @@
-import {useState} from 'react';
-import './App.css';
-import SearchBar from '../SearchBar/SearchBar';
-import SearchResults from '../SearchResults/SearchResults';
-import Playlist from '../Playlist/Playlist';
+import React, { useState, useCallback } from "react";
+import "./App.css";
 
+import Playlist from "../Playlist/Playlist";
+import SearchBar from "../SearchBar/SearchBar";
+import SearchResults from "../SearchResults/SearchResults";
+// import Spotify from "../../util/Spotify";
 
-function App() {
-  const [results, setResults] = useState([]);
+const App = () => {
+const mockData = "Song 1";
 
-  return (
-    <div className='searchPlaylist'>
-      <div className="search">
-        <h2>Search</h2>
-        <SearchBar setResults={setResults}/>
-        <SearchResults results={results} />
-      </div>
-      <div className='playlist'>
-        <h2>Playlist (input title)</h2>
+/*
+const mockDataObject = 
+*/
+return (
+  <div>
+    <h1>
+      Ja<span className="highlight">mmm</span>ing
+    </h1>
+    <div className="App">
+      <SearchBar />
+      <div className="App-playlist">
+        <SearchResults mockData={mockData} />
         <Playlist />
       </div>
     </div>
-  );
-}
+  </div>
+);
+};
 
 export default App;
+
+
+
+
+
+
+/*
+ return (
+    <div>
+      <h1>
+        Ja<span className="highlight">mmm</span>ing
+      </h1>
+      <div className="App">
+        <SearchBar />
+        <div className="App-playlist">
+          <SearchResults mockData={mockData} />
+          <Playlist />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default App;
+*/

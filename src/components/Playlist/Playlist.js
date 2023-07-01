@@ -1,31 +1,21 @@
+import React, { useCallback } from "react";
+
 import "./Playlist.css";
 
+import TrackList from "../TrackList/TrackList";
 
-function Playlist()  {
-    
-  
-    return (
-      <div className="app-container">
-          <table>
-            <thead>
-              <tr>
-                <th>Artist</th>
-                <th>Song</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr>
-                   <td>Billy Joel</td>
-                   <td>Piano Man</td> 
-                </tr>
-            </tbody>
-          </table>
-    
-  
- 
-      </div>
-    );
-  };
-  
-  export default Playlist;
+const Playlist = (props) => {
+
+  return (
+    <div className="Playlist">
+      <input defaultValue={"New Playlist"} />
+      <TrackList />
+      <button className="Playlist-save">
+        SAVE TO SPOTIFY
+      </button>
+    </div>
+  );
+};
+
+export default Playlist;
   

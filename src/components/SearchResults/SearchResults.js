@@ -1,18 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import './SearchResults.css';
-import { ResultsView } from './ResultsView';
+import "./SearchResults.css";
 
-function SearchResults({results}) {
+import TrackList from "../TrackList/TrackList";
+
+const SearchResults = (props) => {
   return (
-    <div className='results-list'>
-        {
-            results.map((result, id) => {
-                return <ResultsView result={result} key={id} />
-            })
-        }
+    <div className="SearchResults">
+      <h2>Results</h2>
+      <TrackList mockData={props.mockData} />
     </div>
-  )
-}
+  );
+};
 
-export default SearchResults
+export default SearchResults;
+

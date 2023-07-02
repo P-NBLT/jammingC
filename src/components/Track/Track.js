@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 
 import "./Track.css";
 
+
 const Track = (props) => {
 
   return (
@@ -13,8 +14,11 @@ const Track = (props) => {
         <p>
         {props.mockData} | {props.mockData}
         </p>
+        <h3>
+          From Track.js - To App.js
+        </h3>
         <p>
-        Text Test
+          {JSON.stringify(props.appObject)}
         </p>
       </div>
     </div>
@@ -22,3 +26,16 @@ const Track = (props) => {
 };
 
 export default Track;
+
+
+/*
+        <>
+        {mockData1.map((item) => (
+          <div key={item.id}>
+            <div>{item.name}</div>
+            <div>{item.album}</div>
+            <div>{item.artist}</div>
+          </div>
+        ))}
+        </>
+        */
